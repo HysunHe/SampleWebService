@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:ns0="http://jws.poc.hysun/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://jws.poc.hysun/">
+   <xsd:complexType name="getEmp">
+      <xsd:sequence>
+         <xsd:element name="arg0" type="xsd:string" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="getEmpResponse">
+      <xsd:sequence>
+         <xsd:element name="return" type="ns0:employee" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="employee">
+      <xsd:sequence>
+         <xsd:element name="id" type="xsd:string" minOccurs="0"/>
+         <xsd:element name="name" type="xsd:string" minOccurs="0"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:element name="getEmp" type="ns0:getEmp"/>
+   <xsd:element name="getEmpResponse" type="ns0:getEmpResponse"/>
+</xsd:schema>
